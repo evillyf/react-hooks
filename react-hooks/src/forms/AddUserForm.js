@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 
 
 const AddUserForm = (props) => {
-    const initialFormState = { id: null, nome: '', usuario: ''}
+    const initialFormState = { id: null, nome: null, usuario: null}
     const [user, setUser] = useState(initialFormState)
 
 
@@ -22,7 +22,7 @@ const AddUserForm = (props) => {
             <input type="text" name="name" value={user.nome} onChange={handleInputChange} />
             <label>Usuário</label>
             <input type="text" name="username" value={user.usuario} onChange={handleInputChange} />
-            <button>Novo usuário</button>
+            <button onClick={() => props.addUser(initialFormState)}>Novo usuário</button>
         </form>
     )
 

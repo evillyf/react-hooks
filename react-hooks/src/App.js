@@ -15,7 +15,7 @@ const App = () => {
 
 
 
-  const initialFormState = { id: null, nome: '', usuario: ''}
+  const initialFormState = { id: null, nome: null, usuario: null}
   const [users, setUsers] = useState(usersData)
   const [currentUser, setCurrentUser] = useState(initialFormState)
   const [editing, setEditing] = useState (false)
